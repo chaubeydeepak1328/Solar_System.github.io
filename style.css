@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+.sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fdd835;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #fdd835;
+}
+
+.earth {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-earth 26s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-moon 2s linear infinite;
+}
+
+/*  sun ring for Earth */
+.sun::before {
+    content: "";
+    position: absolute;
+    top: -400%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
+
+/*  earth ring for moon */
+.earth::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
+
+@keyframes rotate-earth {
+    0% {
+        transform: rotate(0deg) translateX(200px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(200px);
+    }
+}
+
+@keyframes rotate-moon {
+    0% {
+        transform: rotate(0deg) translateX(35px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(35px);
+    }
+}
+
+/* Murcury */
+.murcury {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(183, 184, 185);
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-murcury 7.5s linear infinite;
+}
+
+@keyframes rotate-murcury {
+    0% {
+        transform: rotate(0deg) translateX(70px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(70px);
+    }
+}
+
+/* Venus */
+.venus {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #eed053;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-venus 20s linear infinite;
+}
+
+@keyframes rotate-venus {
+    0% {
+        transform: rotate(0deg) translateX(130px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(130px);
+    }
+}
+
+/* mars  */
+.mars {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ad6242;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-mars 52s linear infinite;
+}
+
+@keyframes rotate-mars {
+    0% {
+        transform: rotate(0deg) translateX(300px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(300px);
+    }
+}
+
+.mars::before {
+    content: "";
+    position: absolute;
+    top: -85%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
+
+/* Ring For Mercury */
+.ring1 {
+    content: "";
+    position: absolute;
+    top: -130%;
+    left: 50%;
+    width: 175px;
+    height: 175px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
+
+/* Ring for Venus */
+.ring2 {
+    content: "";
+    position: absolute;
+    top: -245%;
+    left: 50%;
+    width: 290px;
+    height: 290px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
+
+/* Ring gor Mars */
+.ring3 {
+    content: "";
+    position: absolute;
+    top: -580%;
+    left: 50%;
+    width: 640px;
+    height: 640px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
+
+
+/*  Mars Moon Phobos and Deimos */
+.phobos {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-phobos 0.4s linear infinite;
+}
+
+.deimos {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-deimos 0.9s linear infinite;
+}
+
+@keyframes rotate-phobos {
+    0% {
+        transform: rotate(0deg) translateX(25px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(25px);
+    }
+}
+
+@keyframes rotate-deimos {
+    0% {
+        transform: rotate(0deg) translateX(35px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(35px);
+    }
+}
+
+.ring4 {
+    content: "";
+    position: absolute;
+    top: -130%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%, 50%);
+}
